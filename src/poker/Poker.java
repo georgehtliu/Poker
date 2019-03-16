@@ -262,9 +262,9 @@ public class Poker {
 		int score1 = Integer.parseInt(getScore(hand1)[0]);
 		int score2 = Integer.parseInt(getScore(hand2)[0]);
 		if (score1 > score2) {
-			winner = "player 1";
+			winner = "the winner is player 1";
 		} else if (score2 > score1) {
-			winner = "player 2";
+			winner = "the winner is player 2";
 		} else {
 			if (tieBreaker(hand1) > tieBreaker(hand2)) {
 				winner = "the winner is player 1";
