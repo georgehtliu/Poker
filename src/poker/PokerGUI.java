@@ -193,6 +193,7 @@ public class PokerGUI {
 		String[] handPlayer2 = poker.dealHand();
 		String[] pathsPlayer1 = poker.getImgLocations(handPlayer1);
 		String[] pathsPlayer2 = poker.getImgLocations(handPlayer2);
+		
 		getImg(pathsPlayer1[0], card1);
 		getImg(pathsPlayer1[1], card2);
 		getImg(pathsPlayer1[2], card3);
@@ -203,16 +204,20 @@ public class PokerGUI {
 		getImg(pathsPlayer2[2], card8);
 		getImg(pathsPlayer2[3], card9);
 		getImg(pathsPlayer2[4], card10);
+		
 		String[] scorePlayer1 = poker.getScore(handPlayer1);
 		String[] scorePlayer2 = poker.getScore(handPlayer2);
+		
 		welcomeLabel.setVisible(false);
 		logo.setVisible(false);
 		combLabelPlayer1.setVisible(true);
-		combLabelPlayer1.setText("Player 1: " + scorePlayer1[1]);
 		combLabelPlayer2.setVisible(true);
-		combLabelPlayer2.setText("Player 2: " + scorePlayer2[1]);
 		winnerLabel.setVisible(true);
+		
+		combLabelPlayer1.setText("Player 1: " + scorePlayer1[1]);
+		combLabelPlayer2.setText("Player 2: " + scorePlayer2[1]);
 		winnerLabel.setText(poker.determineWinner(handPlayer1, handPlayer2));
+		
 		play.setText("Simulate again");
 		play.setBounds(405, 50, 117, 29);
 	}
