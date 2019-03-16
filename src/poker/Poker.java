@@ -267,11 +267,13 @@ public class Poker {
 			winner = "player 2";
 		} else {
 			if (tieBreaker(hand1) > tieBreaker(hand2)) {
-				winner = "player 1";
+				winner = "the winner is player 1";
+			} else if (tieBreaker(hand1) < tieBreaker(hand2)) {
+				winner = "the winner is player 2";
 			} else {
-				winner = "player 2";
+				winner = "tie";
 			}
 		}
-		return "The winner is " + winner;
+		return winner;
 	}
 }
